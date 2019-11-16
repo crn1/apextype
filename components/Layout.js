@@ -24,8 +24,6 @@ const Layout = props => (
 		<style jsx global>{`
 			html, body, #__next {
 				margin: 0;
-				width: 100%;
-				height: 100%;
 				-webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
 				font-family: "Share Tech Mono";
