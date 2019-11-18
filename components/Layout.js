@@ -23,9 +23,9 @@ const Layout = props => (
 		</MuiThemeProvider>
 		<style jsx global>{`
 			html, body, #__next {
+				position: fixed;
+				overflow: hidden;
 				margin: 0;
-				-webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
 				font-family: "Share Tech Mono";
 			}
 		`}
