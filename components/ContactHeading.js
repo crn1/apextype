@@ -27,7 +27,7 @@ const Contacts = () => {
 
 	return (
 		<Typography style={{marginTop: '5vh'}} variant='body1'>
-			Feel free to contact me on:
+			Feel free to contact me via:
 			<Grid item container spacing={1} xs style={{ marginTop: '5vh' }}>
 				<Grid item xs={12} md={4}>
 					<Link href='mailto:gluvajic@aol.com'>
