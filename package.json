@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build; ls -al ./.next/server/static/",
     "start": "next start --host=0.0.0.0"
   },
   "dependencies": {
