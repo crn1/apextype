@@ -26,12 +26,12 @@ export default () => {
 	const theme = useTheme()
 	const matches = useMediaQuery(theme.breakpoints.up('md'))
 
-	const { scrollYProgress } = useViewportScroll();
+	const { scrollYProgress } = useViewportScroll()
 
 	const logoY = useTransform(scrollYProgress,
 		[0, 0.20],
 		[matches ? theme.spacing(24) : theme.spacing(10), theme.spacing(2)]
-	);
+	)
 
 	const mainOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
 	const mainScale = useTransform(scrollYProgress, [0.2, 0.20001], [1, 0])
@@ -39,13 +39,12 @@ export default () => {
 	const welcomeOpacity = useTransform(scrollYProgress,
 		[0.2, 0.4, 0.6, 0.7],
 		[0, 1, 1, 0]
-	);
+	)
 	const welcomeScale = useTransform(scrollYProgress, [0.2, 0.20001, 0.7, 0.70001], [0, 1, 1, 0])
 
-	const contactOpacity = useTransform(scrollYProgress, [0.7, 0.95], [0, 1]);
+	const contactOpacity = useTransform(scrollYProgress, [0.7, 0.95], [0, 1])
 	const contactScale = useTransform(scrollYProgress, [0.7, 0.71], [0, 1])
 
-	console.log(mainOpacity);
 	return (
 		<Layout>
 			<Container>
@@ -81,6 +80,5 @@ export default () => {
 				</Slide>
 			</Container>
 		</Layout>
-	);
-
+	)
 }

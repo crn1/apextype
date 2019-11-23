@@ -74,7 +74,7 @@ const ContactHeading = () => {
 					xs={12} md={6} xl={4}>
 
 				<Grid item xs={12}>
-					<Typography align='center' variant={matches ? 'h2' : 'h4'}>
+					<Typography align='center' component='h2' variant={matches ? 'h2' : 'h4'}>
 						Say Hello
 					</Typography>
 				</Grid>

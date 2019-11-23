@@ -1,12 +1,17 @@
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
+import { useTheme } from '@material-ui/core/styles'
 
 import Typed from 'react-typed'
 
-const MainHeading = () => (
+const MainHeading = () => {
+
+	const theme = useTheme()
+
+	return (
 	<Grid container justify='center'>
 		<Grid container item
-				spacing={8}
+				spacing={4}
 				xs={12} md={6} xl={4}>
 
 				<Grid item xs={12}>
@@ -21,18 +26,19 @@ const MainHeading = () => (
 				</Grid>
 
 				<Grid item xs={12}>
-					<Typography align='center'>
+					<Typography align='center' style={{paddingTop: theme.spacing(8)}}>
 						<Typed
 							strings={['SCROLL DOWN']}
 							typeSpeed={10}
 							showCursor={false}
-							startDelay={3300}
+							startDelay={3500}
 						/>
 					</Typography>
 				</Grid>
 
 		</Grid>
 	</Grid>
-)
+	)
+}
 
 export default MainHeading

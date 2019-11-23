@@ -1,14 +1,14 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
-import { useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const WelcomeHeading = () => {
 
-	const theme = useTheme();
-	const matches = useMediaQuery(theme.breakpoints.up('md'));
+	const theme = useTheme()
+	const matches = useMediaQuery(theme.breakpoints.up('md'))
 
 	return (
 		<Grid container justify='center'>
@@ -18,7 +18,7 @@ const WelcomeHeading = () => {
 					xs={12} md={6} xl={4}>
 
 				<Grid item xs={12}>
-					<Typography align='center' variant={matches ? 'h2' : 'h4'}>
+					<Typography align='center' component='h1' variant={matches ? 'h2' : 'h4'}>
 						Welcome
 					</Typography>
 				</Grid>
@@ -41,4 +41,4 @@ const WelcomeHeading = () => {
 
 }
 
-export default WelcomeHeading;
+export default WelcomeHeading

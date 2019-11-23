@@ -17,7 +17,7 @@ const MainLogo = () => {
 			transition={{ duration: 0.3 }}
 		>
 			<Typography
-					align='center' variant={matches ? 'h1' : 'h3'}>
+					align='center' component='h1' variant={matches ? 'h1' : 'h3'}>
 				<Typed
 					strings={['apextype']}
 					typeSpeed={60}
