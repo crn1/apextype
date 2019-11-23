@@ -14,16 +14,18 @@ const Layout = props => (
 	<>
 		<Head>
 			<title>&#9650; apextype</title>
-			<meta name='viewport' content='width=device-width, initial-scale=1' />
+			<meta name='viewport' content='minimum-scale=1, width=device-width, initial-scale=1, shrink-to-fit=no' />
 			<meta charSet='utf-8' />
 			<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 		</Head>
-		<MuiThemeProvider theme={theme}>
-			{ props.children }	
-		</MuiThemeProvider>
+		<body>
+			<MuiThemeProvider theme={theme}>
+				{ props.children }	
+			</MuiThemeProvider>
+		</body>
 		<style jsx>{`
-			html, body, #__next {
-				margin: 0px;
+			body {
+				margin: 0;
 			}
 		`}
 		</style>

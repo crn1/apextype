@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import { styled, makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
@@ -13,7 +13,7 @@ import EmailIcon from '@material-ui/icons/Email';
 
 const ContactItem = (props) => (
 	<Grid item xs={12} md={4}>
-		<Link href={props.href}>
+		<Link underline='none' href={props.href}>
 			<Button fullWidth size='large'>
 				{ props.icon }
 				{ props.text }
@@ -35,12 +35,7 @@ const Contacts = () => {
 	const classes = useStyles();
 
 	return (
-		<Grid container xs
-				justify='center'>
-			<Grid item container
-					spacing={1}
-					xs={12} md={10}
-					style={{ marginTop: '5vh' }}>
+			<>
 				<ContactItem
 					href='mailto:gluvajic@aol.com'
 					icon={<EmailIcon className={classes.icon} />}
@@ -62,32 +57,41 @@ const Contacts = () => {
 					/>}
 					text='GitHub'
 				/>
-			</Grid>
-		</Grid>
+			</>
 	);
 };
-
-const ContactTypography = styled(Typography)(({ theme }) => ({
-	padding: theme.spacing(2),
-	paddingTop: '20vh',
-}));
 
 const ContactHeading = () => {
 
 	const theme = useTheme();
-	const matches = useMediaQuery(theme.breakpoints.up('sm'));
+	const matches = useMediaQuery(theme.breakpoints.up('md'));
 
 	return (
-		<ContactTypography
-				align='center' variant={matches ? 'h2' : 'h4'}>
-			Say Hello.
-			<Typography style={{marginTop: '5vh'}} variant='body1'>
-				Feel free to contact me via:
-			</Typography>
-			<Contacts />
-		</ContactTypography>
-	);
+		<Grid container justify='center'>
+			<Grid container item
+					spacing={4}
+					justify='center'
+					xs={12} md={6} xl={4}>
 
+				<Grid item xs={12}>
+					<Typography align='center' variant={matches ? 'h2' : 'h4'}>
+						Say Hello
+					</Typography>
+				</Grid>
+
+				<Grid item xs={12}>
+					<Typography align='center'>
+						Feel free to contact me via:
+					</Typography>
+				</Grid>
+
+				<Grid container item xs={12}>
+					<Contacts />
+				</Grid>
+
+			</Grid>
+		</Grid>
+	);
 }
 
 export default ContactHeading;
