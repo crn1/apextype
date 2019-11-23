@@ -9,6 +9,10 @@ import blue from '@material-ui/core/colors/blue'
 import purple from '@material-ui/core/colors/purple'
 import red from '@material-ui/core/colors/red'
 
+import yellow from '@material-ui/core/colors/yellow'
+import orange from '@material-ui/core/colors/orange'
+import amber from '@material-ui/core/colors/amber'
+
 import MainHeading from '../components/MainHeading'
 import MainLogo from '../components/MainLogo'
 import WelcomeHeading from '../components/WelcomeHeading'
@@ -18,7 +22,7 @@ import Slide from '../components/Slide'
 
 const Container = styled(Box)({
 	height: '400vh',
-	background: `linear-gradient(45deg, ${red[400]}, ${purple[400]}, ${blue[500]})`,
+	background: `linear-gradient(45deg, ${yellow[500]}, ${amber[200]}, ${orange[500]})`,
 })
 
 export default () => {
