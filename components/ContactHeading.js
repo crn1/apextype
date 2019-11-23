@@ -11,7 +11,16 @@ import { useTheme } from '@material-ui/core/styles';
 
 import EmailIcon from '@material-ui/icons/Email';
 
-import Typed from 'react-typed';
+const ContactItem = (props) => (
+	<Grid item xs={12} md={4}>
+		<Link href={props.href}>
+			<Button fullWidth size='large'>
+				{ props.icon }
+				{ props.text }
+			</Button>
+		</Link>
+	</Grid>
+) 
 
 const Contacts = () => {
 
@@ -19,42 +28,42 @@ const Contacts = () => {
 		icon: {
 			width: 32,
 			height: 32,
-			marginRight: theme.spacing(2),
+			paddingRight: theme.spacing(2),
 		},
 	}));
 
 	const classes = useStyles();
 
 	return (
-		<Typography style={{marginTop: '5vh'}} variant='body1'>
-			Feel free to contact me via:
-			<Grid item container spacing={1} xs style={{ marginTop: '5vh' }}>
-				<Grid item xs={12} md={4}>
-					<Link href='mailto:gluvajic@aol.com'>
-						<Button fullWidth size='large'>
-							<EmailIcon className={classes.icon} />
-							Email
-						</Button>
-					</Link>
-				</Grid>
-				<Grid item xs={12} md={4}>
-					<Link href='https://www.linkedin.com/in/sigma-dorde'>
-						<Button fullWidth size='large'>
-							<img className={classes.icon} src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" />
-							LinkedIn
-						</Button>
-					</Link>
-				</Grid>
-				<Grid item xs={12} md={4}>
-					<Link href='https://github.com/crn1'>
-						<Button fullWidth size='large'>
-							<img className={classes.icon} src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" />
-							GitHub
-						</Button>
-					</Link>
-				</Grid>
+		<Grid container xs
+				justify='center'>
+			<Grid item container
+					spacing={1}
+					xs={12} md={10}
+					style={{ marginTop: '5vh' }}>
+				<ContactItem
+					href='mailto:gluvajic@aol.com'
+					icon={<EmailIcon className={classes.icon} />}
+					text='Email'
+				/>
+				<ContactItem
+					href='https://www.linkedin.com/in/sigma-dorde'
+					icon={<img
+						className={classes.icon}
+						src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg'
+					/>}
+					text='LinkedIn'
+				/>
+				<ContactItem
+					href='https://github.com/crn1'
+					icon={<img
+						className={classes.icon}
+						src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg'
+					/>}
+					text='GitHub'
+				/>
 			</Grid>
-		</Typography>
+		</Grid>
 	);
 };
 
@@ -71,10 +80,10 @@ const ContactHeading = () => {
 	return (
 		<ContactTypography
 				align='center' variant={matches ? 'h2' : 'h4'}>
-			<Typed
-				strings={['Say Hello.']}
-				typeSpeed={0}
-			/>
+			Say Hello.
+			<Typography style={{marginTop: '5vh'}} variant='body1'>
+				Feel free to contact me via:
+			</Typography>
 			<Contacts />
 		</ContactTypography>
 	);

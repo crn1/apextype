@@ -21,12 +21,9 @@ const Layout = props => (
 		<MuiThemeProvider theme={theme}>
 			{ props.children }	
 		</MuiThemeProvider>
-		<style jsx global>{`
+		<style jsx>{`
 			html, body, #__next {
-				position: fixed;
-				overflow: hidden;
-				margin: 0;
-				font-family: "Share Tech Mono";
+				margin: 0px;
 			}
 		`}
 		</style>

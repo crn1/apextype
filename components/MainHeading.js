@@ -21,7 +21,7 @@ const Quote = () => (
 const ScrollDown = () => (
 	<Typography style={{ marginTop: '20vh', }} variant='body1'>
 		<Typed
-			strings={['SCROLL DOWN &#8897;']}
+			strings={['SCROLL DOWN']}
 			typeSpeed={10}
 			showCursor={false}
 			startDelay={3300}
@@ -47,7 +47,7 @@ const MainHeading = () => {
 				animate={{ opacity: 1, y: 0, scale: 1, }}
 				transition={{ duration: 0.3 }}
 			>
-				<Box style={{display: 'fixed'}}>&#9650;</Box>
+				<span style={{marginRight: theme.spacing(2),}}>&#9651;</span>
 				<Typed
 					strings={['apextype']}
 					typeSpeed={60}
