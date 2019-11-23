@@ -43,7 +43,7 @@ export default () => {
 	const welcomeScale = useTransform(scrollYProgress, [0.2, 0.20001, 0.7, 0.70001], [0, 1, 1, 0])
 
 	const contactOpacity = useTransform(scrollYProgress, [0.7, 0.95], [0, 1])
-	const contactScale = useTransform(scrollYProgress, [0.7, 0.71], [0, 1])
+	const contactScale = useTransform(scrollYProgress, [0.7, 0.70001], [0, 1])
 
 	return (
 		<Layout>
