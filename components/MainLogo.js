@@ -14,14 +14,14 @@ const MainLogo = () => {
 			style={{ paddingDown: theme.spacing(12) }}
 			initial={{ opacity: 0, y: 300, scale: 0.1, }}
 			animate={{ opacity: 1, y: 0, scale: 1, }}
-			transition={{ duration: 0.3 }}
+			transition={{ duration: 0.3, delay: 0.3 }}
 		>
 			<Typography
 					align='center' component='h1' variant={matches ? 'h1' : 'h3'}>
 				<Typed
 					strings={['apextype']}
 					typeSpeed={60}
-					startDelay={1250}
+					startDelay={1750}
 				/>
 			</Typography>
 		</motion.div>

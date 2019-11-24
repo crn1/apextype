@@ -20,7 +20,7 @@ const MainHeading = () => {
 							strings={['“The happiest moment I felt; is that moment when I realized my ability to <b>create</b>.”']}
 							typeSpeed={3}
 							showCursor={false}
-							startDelay={2500}
+							startDelay={2700}
 						/>
 					</Typography>
 				</Grid>
@@ -31,7 +31,7 @@ const MainHeading = () => {
 							strings={['SCROLL DOWN']}
 							typeSpeed={10}
 							showCursor={false}
-							startDelay={3500}
+							startDelay={3550}
 						/>
 					</Typography>
 				</Grid>

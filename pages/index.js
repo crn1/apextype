@@ -20,7 +20,7 @@ import ContactHeading from '../components/ContactHeading'
 import Layout from '../components/Layout'
 import Slide from '../components/Slide'
 
-const Container = styled(Box)({
+const Container = styled(motion.div)({
 	height: '400vh',
 	background: `linear-gradient(45deg, ${yellow[500]}, ${amber[200]}, ${orange[500]})`,
 })
@@ -51,7 +51,11 @@ export default () => {
 
 	return (
 		<Layout>
-			<Container>
+			<Container
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 0.5 }}
+				>
 				<Slide
 						style={{
 							y: logoY,
