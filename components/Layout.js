@@ -14,7 +14,8 @@ const theme = createMuiTheme({
 const Layout = props => (
 	<html>
 		<Head>
-			<title>&#9650; apextype</title>
+			<title>apextype</title>
+			<link rel='shortcut icon' type='image/ico' href='/public/favicon.ico' />
 			<meta name='viewport' content='minimum-scale=1, width=device-width, initial-scale=1, shrink-to-fit=no' />
 			<meta charSet='utf-8' />
 			<link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap' rel='stylesheet' />
