@@ -46,6 +46,7 @@ const Contacts = () => {
 					icon={<img
 						className={classes.icon}
 						src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg'
+						alt='LinkedIn logo'
 					/>}
 					text='LinkedIn'
 				/>
@@ -54,6 +55,7 @@ const Contacts = () => {
 					icon={<img
 						className={classes.icon}
 						src='https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg'
+						alt='GitHub logo'
 					/>}
 					text='GitHub'
 				/>
@@ -74,7 +76,7 @@ const ContactHeading = () => {
 					xs={12} md={6} xl={4}>
 
 				<Grid item xs={12}>
-					<Typography align='center' component='h2' variant={matches ? 'h2' : 'h4'}>
+					<Typography align='center' component='h1' variant={matches ? 'h2' : 'h4'}>
 						Say Hello
 					</Typography>
 				</Grid>
