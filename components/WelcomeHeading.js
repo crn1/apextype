@@ -31,7 +31,7 @@ const WelcomeHeading = () => {
 
 				<Grid item xs={12}>
 					<Typography align='center'>
-						I take a special approach to the development that involves minimalism with the emphasis on stability, peformance and scability.
+						I take a special approach to the development that involves minimalism with the emphasis on stability, peformance and scalability.
 					</Typography>
 				</Grid>
 
