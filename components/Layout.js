@@ -15,7 +15,7 @@ const Layout = props => (
 	<html lang='en'>
 		<Head>
 			<title>apextype | Creating Software for the Magnificent</title>
-			<link rel='shortcut icon' type='image/ico' href='/public/favicon.ico' />
+			<link rel='shortcut icon' type='image/ico' href='/static/favicon.ico' />
 
 			<meta name='viewport' content='minimum-scale=1, width=device-width, initial-scale=1, shrink-to-fit=no' />
 			<meta name='description' content='My name is Đorđe and I am a full-stack developer from Novi Sad, Serbia. I take a special minimalistic approach to the development.' />
